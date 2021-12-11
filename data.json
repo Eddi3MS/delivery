@@ -1,0 +1,43 @@
+{
+  "products": [
+    {
+      "id": "00",
+      "name": "X Salada",
+      "image": "./images/salada.jpg",
+      "description": "ingredientes do sanduiche..",
+      "price": 17,
+
+      "type": "lanches"
+    },
+    {
+      "id": "01",
+      "name": "X Bacon",
+      "image": "./images/bacon.jpg",
+      "description": "ingredientes do sanduiche..",
+      "price": 22,
+
+      "type": "lanches"
+    },
+
+    {
+      "id": "04",
+      "name": "Coca cola 2lts",
+      "price": 10,
+      "type": "bebidas"
+    },
+    {
+      "id": "05",
+      "name": "Fanta 2lts",
+      "price": 8,
+      "type": "bebidas"
+    },
+    {
+      "id": "06",
+      "name": "Bolo de Morango",
+      "image": "./images/sobremesa.webp",
+      "description": "bolo delicioso.",
+      "price": 5,
+      "type": "sobremesas"
+    }
+  ]
+}

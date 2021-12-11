@@ -1,0 +1,30 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.7rem;
+}
+
+.menu button {
+  background: linear-gradient(#0150ad, #186ac9);
+  border: none;
+  color: #f6f7f9;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu button:hover {
+  background: #186ac9;
+}
+
+.menu button + button {
+  margin-left: 20px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}

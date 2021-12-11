@@ -1,0 +1,8 @@
+.logo {
+  width: 100%;
+  height: calc(width / 2);
+}
+
+.logo img {
+  width: 100%;
+}
