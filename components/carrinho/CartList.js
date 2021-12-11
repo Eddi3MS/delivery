@@ -33,7 +33,7 @@ function CartList() {
   }, [cart]);
 
   const msg = cart.map((product) => {
-    const message = `Quantidade: 0${product.qty}%0ANome: ${product.name}%0APreço: ${product.price}`;
+    const message = `Quantidade: 0${product.qty}%0ANome: ${product.name}%0APreço: ${product.price},00`;
     return message;
   });
 
