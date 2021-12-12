@@ -77,10 +77,6 @@ select {
   }
 }
 
-.main {
-  padding-inline: 1em;
-}
-
 .main .empty {
   text-align: center;
   padding-block: 2rem;
@@ -94,6 +90,10 @@ select {
     max-width: 900px;
     margin-inline: auto;
   }
+}
+
+.homeSection {
+  margin-inline: 1rem;
 }
 
 .title {

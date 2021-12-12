@@ -15,9 +15,10 @@ export default function Home() {
       </Head>
       <Header />
       <Logo />
-
-      <h2 className="title">Menu</h2>
-      <ProductsList />
+      <section className="homeSection">
+        <h2 className="title">Menu</h2>
+        <ProductsList />
+      </section>
     </main>
   );
 }

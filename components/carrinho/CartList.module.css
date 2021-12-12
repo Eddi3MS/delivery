@@ -1,3 +1,7 @@
+.cartSection {
+  margin-inline: 1rem;
+}
+
 .table {
   border-collapse: collapse;
   width: 100%;
@@ -60,6 +64,8 @@
 
 .address input {
   border: 1px solid #0150ad;
+  border-radius: 4px;
+  height: 2rem;
 }
 
 .address input:focus-visible {

@@ -11,12 +11,16 @@ function header() {
     <header className={classes.header}>
       <Link href="/" passHref>
         <div className={classes.logo}>
-          <img src="./images/home.svg" alt="Pis. Assados em Geral" />
+          <img className={classes.icon} src="./images/home.svg" alt="home" />
         </div>
       </Link>
       <Link href="/carrinho" passHref>
         <div className={classes.cart}>
-          <img src="./images/cart.svg" alt="carrinho" />
+          <img
+            className={classes.icon}
+            src="./images/cart.svg"
+            alt="carrinho"
+          />
           <span>{cart.length}</span>
         </div>
       </Link>

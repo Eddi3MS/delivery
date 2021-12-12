@@ -62,7 +62,7 @@ function CartList() {
     router.push(`https://wa.me/+55${phone}?text=${message}`);
   }
   return (
-    <>
+    <section className={classes.cartSection}>
       <Card>
         <table className={classes.table}>
           <thead>
@@ -147,7 +147,7 @@ function CartList() {
       <p className={classes.warning}>
         * você será direcionado para o whatsapp.
       </p>
-    </>
+    </section>
   );
 }
 
