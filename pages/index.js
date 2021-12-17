@@ -16,7 +16,6 @@ export default function Home() {
       <Header />
       <Logo />
       <section className="homeSection">
-        <h2 className="title">Menu</h2>
         <ProductsList />
       </section>
     </main>

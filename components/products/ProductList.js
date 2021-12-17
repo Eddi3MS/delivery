@@ -31,42 +31,50 @@ function ProductList() {
 
   return (
     <>
-      <nav className={classes.menu}>
-        <button
-          value="lanches"
-          onClick={(e) => {
-            productDispatch({
-              type: "FILTER_BY_TYPE",
-              payload: e.target.value,
-            });
-          }}
-        >
-          Lanches
-        </button>
-        <button
-          value="bebidas"
-          onClick={(e) => {
-            productDispatch({
-              type: "FILTER_BY_TYPE",
-              payload: e.target.value,
-            });
-          }}
-        >
-          Bebidas
-        </button>
-        <button
-          value="sobremesas"
-          onClick={(e) => {
-            productDispatch({
-              type: "FILTER_BY_TYPE",
-              payload: e.target.value,
-            });
-          }}
-          aria-pressed={menu === "sobremesas" ? true : false}
-        >
-          Sobremesas
-        </button>
-      </nav>
+      <div className={classes.navigation}>
+        <h2 className="title">Menu</h2>
+        <nav className={classes.menu}>
+          <button
+            value="lanches"
+            onClick={(e) => {
+              productDispatch({
+                type: "FILTER_BY_TYPE",
+                payload: e.target.value,
+              });
+              setMenu(e.target.value);
+            }}
+            aria-pressed={menu === "lanches" ? true : false}
+          >
+            Lanches
+          </button>
+          <button
+            value="bebidas"
+            onClick={(e) => {
+              productDispatch({
+                type: "FILTER_BY_TYPE",
+                payload: e.target.value,
+              });
+              setMenu(e.target.value);
+            }}
+            aria-pressed={menu === "bebidas" ? true : false}
+          >
+            Bebidas
+          </button>
+          <button
+            value="sobremesas"
+            onClick={(e) => {
+              productDispatch({
+                type: "FILTER_BY_TYPE",
+                payload: e.target.value,
+              });
+              setMenu(e.target.value);
+            }}
+            aria-pressed={menu === "sobremesas" ? true : false}
+          >
+            Sobremesas
+          </button>
+        </nav>
+      </div>
       <ul className={classes.list}>
         {transformProducts().map((prod) => (
           <ProductItem key={prod.id} prod={prod} />
