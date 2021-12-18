@@ -38,14 +38,14 @@ function ProductList() {
   let notification;
   if (cartMessage === "plus") {
     notification = {
-      status: "success",
+      status: "added",
       message: "Produto adicionado ao carrinho.",
     };
   }
 
   if (cartMessage === "minus") {
     notification = {
-      status: "error",
+      status: "removed",
       message: "Produto removido do carrinho.",
     };
   }

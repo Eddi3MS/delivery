@@ -7,12 +7,12 @@ function Notification(props) {
 
   let statusClasses = "";
 
-  if (status === "success") {
-    statusClasses = classes.success;
+  if (status === "added") {
+    statusClasses = classes.added;
   }
 
-  if (status === "error") {
-    statusClasses = classes.error;
+  if (status === "removed") {
+    statusClasses = classes.removed;
   }
 
   const cssClasses = `${classes.notification} ${statusClasses}`;
