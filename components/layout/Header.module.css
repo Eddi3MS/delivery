@@ -26,9 +26,14 @@
 
 .cart span {
   position: absolute;
+  background-color: #b61020;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
   top: -10px;
   right: -4px;
-  color: #0150ad;
-  font-weight: 700;
+  color: #f6f7f9;
+  font-weight: 600;
   font-size: 0.85rem;
 }

@@ -1,32 +1,19 @@
 import classes from "./ProductList.module.css";
 import { CartState } from "../../store/cart-context";
-import ProductItem from "./ProductItem";
+import Card from "../ui/Card";
 import { useState, useEffect } from "react";
 import Notification from "../ui/notification";
 
 function ProductList() {
-  const [menu, setMenu] = useState("lanches");
-  const [cartItems, setCartItems] = useState(0);
-  const [prevItems, setPrevItems] = useState(0);
+  const [menu, setMenu] = useState();
   const [cartMessage, setCartMessage] = useState(0);
 
   const {
     state: { cart, products },
     productDispatch,
+    dispatch,
     productState: { byType },
   } = CartState();
-
-  useEffect(() => {
-    setCartItems(cart.length);
-    if (cartItems > prevItems) {
-      setCartMessage("plus");
-      setPrevItems(cart.length);
-    }
-    if (cartItems < prevItems) {
-      setCartMessage("minus");
-      setPrevItems(cart.length);
-    }
-  }, [cart, cartItems, prevItems]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -116,7 +103,61 @@ function ProductList() {
       </div>
       <ul className={classes.list}>
         {transformProducts().map((prod) => (
-          <ProductItem key={prod.id} prod={prod} />
+          <li key={prod.id} className={classes.item}>
+            <Card>
+              {prod.image ? (
+                <div className={classes.image}>
+                  <img src={prod.image} alt={prod.name} />
+                </div>
+              ) : null}
+
+              <div className={classes.heading}>
+                <h3>{prod.name}</h3> <h4>R$ {prod.price},00</h4>
+              </div>
+              <div className={classes.content}>
+                <p>{prod.description}</p>
+
+                <p className={classes.info}>{prod.weight}</p>
+              </div>
+              <div className={classes.actions}>
+                {cart.some((p) => p.id === prod.id) ? (
+                  <button
+                    className={classes.remove}
+                    onClick={() => {
+                      dispatch({
+                        type: "REMOVE_FROM_CART",
+                        payload: prod,
+                      });
+                      setCartMessage("minus");
+                    }}
+                  >
+                    <img
+                      src="./images/remove_cart.svg"
+                      alt="remover do carrinho"
+                    />
+                    Remover
+                  </button>
+                ) : (
+                  <button
+                    className={classes.add}
+                    onClick={() => {
+                      dispatch({
+                        type: "ADD_TO_CART",
+                        payload: prod,
+                      });
+                      setCartMessage("plus");
+                    }}
+                  >
+                    <img
+                      src="./images/add_cart.svg"
+                      alt="Adicionar ao Carrinho"
+                    />
+                    Adicionar
+                  </button>
+                )}
+              </div>
+            </Card>
+          </li>
         ))}
       </ul>
 

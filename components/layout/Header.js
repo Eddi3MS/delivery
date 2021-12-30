@@ -21,7 +21,7 @@ function header() {
             src="./images/cart.svg"
             alt="carrinho"
           />
-          <span>{cart.length}</span>
+          {cart.length >= 1 ? <span>{cart.length}</span> : null}
         </div>
       </Link>
     </header>

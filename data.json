@@ -21,13 +21,15 @@
 
     {
       "id": "04",
-      "name": "Coca cola 2lts",
+      "name": "Coca 2lts",
+      "image": "./images/coca.png",
       "price": 10,
       "type": "bebidas"
     },
     {
       "id": "05",
       "name": "Fanta 2lts",
+      "image": "./images/fanta.png",
       "price": 8,
       "type": "bebidas"
     },
